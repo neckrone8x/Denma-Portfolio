@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>DENMA SOLUTIONS · Denma · Frontend & IoT</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<div class="aurora-container">
+  <div class="aurora-blob blob-1"></div>
+  <div class="aurora-blob blob-2"></div>
+  <div class="aurora-blob blob-3"></div>
+</div>
+<div id="tsparticles"></div>
+<div class="mouse-glow"></div>
+<canvas id="bg-canvas"></canvas>
+
+<div class="container">
+
+  <header>
+    <div class="logo"><i class="fas fa-microchip"></i> DENMA<span>SOLUTIONS</span></div>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation"><i class="fas fa-bars"></i></button>
+    <nav class="nav-links" id="navLinks">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme"><i class="fas fa-moon"></i></button>
+  </header>
+
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <span class="hero-badge"><span class="pulse-dot"></span> Available for collaboration</span>
+      <h1>Hi, I'm <span class="accent">Denis</span><br />I build for the web &amp; beyond.</h1>
+      <p class="typing-line"><span id="typed-text"></span><span class="cursor">|</span></p>
+      <p class="hero-desc">Frontend developer crafting clean, interactive experiences with HTML, CSS, JavaScript &amp; C++. Currently exploring Arduino and the Internet of Things.</p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn-primary"><i class="fas fa-rocket"></i> View Projects</a>
+        <a href="#contact" class="btn btn-outline"><i class="fas fa-paper-plane"></i> Let's Connect</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><h4 data-count="6">0</h4><span>Projects</span></div>
+        <div class="stat"><h4 data-count="7">0</h4><span>Tech Skills</span></div>
+        <div class="stat"><h4 data-count="100">0</h4><span>% Passion</span></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="chip-wrap" id="chipWrap">
+        <div class="glowing-chip">
+          <div class="orbit orbit-1"></div>
+          <div class="orbit orbit-2"></div>
+          <div class="orbit orbit-3"></div>
+          <div class="chip-photo">
+            <img src="profile.jpg" alt="Denma" class="profile-img" onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg,#00e6d4,#8b5cf6)';" />
+            <span class="chip-spotlight"></span>
+            <span class="chip-shine"></span>
+          </div>
+          <span class="chip-ring"></span>
+          <span class="chip-pulse"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about-section" id="about">
+    <h2>About Me</h2>
+    <p class="section-subtitle">A short introduction to who I am and what drives me.</p>
+    <div class="about-grid">
+      <div class="about-card"><i class="fas fa-code-branch"></i><h3>Builder at Heart</h3><p>I turn ideas into interactive experiences — from pixel-perfect frontends to hardware prototypes that sense the real world.</p></div>
+      <div class="about-card"><i class="fas fa-graduation-cap"></i><h3>Always Learning</h3><p>IT student with a strong curiosity for web technologies, IoT, and the little details that make interfaces feel alive.</p></div>
+      <div class="about-card"><i class="fas fa-bolt"></i><h3>Fast &amp; Clean</h3><p>I care about performance, accessibility, and code that other humans can read six months from now.</p></div>
+    </div>
+  </section>
+
+  <section class="skills-section" id="skills">
+    <h2>Tech &amp; Tools</h2>
+    <p class="section-subtitle">The languages, frameworks, and hardware I work with.</p>
+    <div class="skills-grid">
+      <div class="skill-tag"><i class="fab fa-html5"></i> HTML5</div>
+      <div class="skill-tag"><i class="fab fa-css3-alt"></i> CSS3</div>
+      <div class="skill-tag"><i class="fab fa-js"></i> JavaScript</div>
+      <div class="skill-tag"><i class="fas fa-code"></i> C++</div>
+      <div class="skill-tag"><i class="fas fa-microchip"></i> Arduino</div>
+      <div class="skill-tag"><i class="fas fa-cloud-sun"></i> API Integration</div>
+      <div class="skill-tag"><i class="fas fa-mobile-alt"></i> Responsive Design</div>
+      <div class="skill-tag"><i class="fas fa-gamepad"></i> Game Logic</div>
+      <div class="skill-tag"><i class="fab fa-git-alt"></i> Git &amp; GitHub</div>
+      <div class="skill-tag"><i class="fas fa-database"></i> LocalStorage</div>
+    </div>
+  </section>
+
+  <section class="projects-section" id="projects">
+    <h2>Featured Projects</h2>
+    <p class="section-subtitle">Hover any card to play its live preview. Click to open the full app.</p>
+    <div class="projects-grid">
+
+      <div class="project-card">
+        <div class="project-preview preview-weather">
+          <div class="preview-scene">
+            <div class="sun"></div>
+            <div class="cloud cloud-1"></div>
+            <div class="cloud cloud-2"></div>
+            <div class="cloud cloud-3"></div>
+            <div class="rain"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+            <div class="temp-readout">24°</div>
+          </div>
+          <div class="preview-overlay"><i class="fas fa-play"></i></div>
+        </div>
+        <div class="project-body">
+          <h3>Weather API</h3>
+          <p>Real-time weather dashboard fetching from OpenWeather API. Dynamic backgrounds, search by city, and clean UI.</p>
+          <div class="tech-stack"><span>JavaScript</span><span>API</span><span>CSS3</span></div>
+          <a href="#" class="project-link">Live Demo <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-preview preview-snake">
+          <div class="preview-scene">
+            <div class="snake-grid"></div>
+            <div class="snake-body"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+            <div class="snake-food"></div>
+            <div class="snake-score">SCORE: 042</div>
+          </div>
+          <div class="preview-overlay"><i class="fas fa-play"></i></div>
+        </div>
+        <div class="project-body">
+          <h3>Snake Game</h3>
+          <p>Classic snake game built on HTML5 canvas with score tracking, speed increase, and smooth keyboard controls.</p>
+          <div class="tech-stack"><span>JavaScript</span><span>Canvas</span><span>Game</span></div>
+          <a href="#" class="project-link">Play Now <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-preview preview-todo">
+          <div class="preview-scene">
+            <div class="todo-window">
+              <div class="todo-bar"></div>
+              <div class="todo-item"><span class="check"></span><span class="todo-line"></span></div>
+              <div class="todo-item"><span class="check"></span><span class="todo-line short"></span></div>
+              <div class="todo-item"><span class="check"></span><span class="todo-line"></span></div>
+              <div class="todo-item"><span class="check"></span><span class="todo-line"></span></div>
+            </div>
+          </div>
+          <div class="preview-overlay"><i class="fas fa-play"></i></div>
+        </div>
+        <div class="project-body">
+          <h3>To-Do List App</h3>
+          <p>Task manager with local storage, add/delete/complete features, filter by status, and a minimal interface.</p>
+          <div class="tech-stack"><span>JavaScript</span><span>LocalStorage</span><span>CRUD</span></div>
+          <a href="#" class="project-link">Live Demo <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-preview preview-calc">
+          <div class="preview-scene">
+            <div class="calc-window">
+              <div class="calc-display">
+                <span class="calc-num"><span style="color:var(--primary)">128</span></span>
+              </div>
+              <div class="calc-keys"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+            </div>
+          </div>
+          <div class="preview-overlay"><i class="fas fa-play"></i></div>
+        </div>
+        <div class="project-body">
+          <h3>Simple Calculator</h3>
+          <p>Fully functional calculator with keyboard support, calculation history, and responsive button grid.</p>
+          <div class="tech-stack"><span>JavaScript</span><span>CSS Grid</span><span>Math</span></div>
+          <a href="#" class="project-link">Try it <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-preview preview-ttt">
+          <div class="preview-scene">
+            <div class="ttt-grid">
+              <span class="cell x">×</span><span class="cell"></span><span class="cell o">○</span>
+              <span class="cell"></span><span class="cell x">×</span><span class="cell"></span>
+              <span class="cell o">○</span><span class="cell"></span><span class="cell x">×</span>
+            </div>
+            <div class="ttt-winner">X WINS</div>
+          </div>
+          <div class="preview-overlay"><i class="fas fa-play"></i></div>
+        </div>
+        <div class="project-body">
+          <h3>Tic Tac Toe</h3>
+          <p>Two-player Tic Tac Toe with win detection, draw handling, score tracking, and a sleek dark theme.</p>
+          <div class="tech-stack"><span>JavaScript</span><span>Game</span><span>DOM</span></div>
+          <a href="#" class="project-link">Play Game <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-preview preview-arduino">
+          <div class="preview-scene">
+            <div class="arduino-board">
+              <div class="arduino-chip"></div>
+              <div class="arduino-pins"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+            </div>
+            <div class="arduino-leds"><span class="led led-1"></span><span class="led led-2"></span><span class="led led-3"></span></div>
+            <div class="arduino-wave">
+              <svg viewBox="0 0 200 40" preserveAspectRatio="none"><path d="M0,20 Q10,0 20,20 T40,20 T60,20 T80,20 T100,20 T120,20 T140,20 T160,20 T180,20 T200,20"/></svg>
+            </div>
+          </div>
+          <div class="preview-overlay"><i class="fas fa-play"></i></div>
+        </div>
+        <div class="project-body">
+          <h3>Arduino Lab</h3>
+          <p>Currently learning: sensors, serial communication, LED matrices, and mini IoT prototypes. Stay tuned!</p>
+          <div class="tech-stack"><span>Arduino</span><span>C++</span><span>IoT</span></div>
+          <a href="#" class="project-link">In Progress <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="contact-section" id="contact">
+    <div class="contact-header">
+      <h2>Let's Connect</h2>
+      <p>Find me on these platforms — I'm always open to collaborate or chat. Hover the icons and watch them dance.</p>
+    </div>
+    <div class="social-grid">
+      <a href="https://www.linkedin.com/in/denis-otieno-26699631b" target="_blank" rel="noopener" class="social-card dance-swing">
+        <span class="social-icon"><i class="fab fa-linkedin-in"></i></span>
+        <span class="social-label">Denis Otieno</span>
+      </a>
+      <a href="https://github.com/206d-ops" target="_blank" rel="noopener" class="social-card dance-bounce">
+        <span class="social-icon"><i class="fab fa-github"></i></span>
+        <span class="social-label">206d-ops0</span>
+      </a>
+      <a href="https://wa.me/254751263862" target="_blank" rel="noopener" class="social-card dance-ring">
+        <span class="social-icon"><i class="fab fa-whatsapp"></i></span>
+        <span class="social-label">WhatsApp</span>
+      </a>
+      <a href="https://twitter.com/@mr_206d" target="_blank" rel="noopener" class="social-card dance-flip">
+        <span class="social-icon"><i class="fab fa-twitter"></i></span>
+        <span class="social-label">Twitter</span>
+      </a>
+    </div>
+    <div class="email-wrap">
+      <a href="mailto:denisotieno955@gmail.com" class="email-highlight"><i class="fas fa-envelope"></i>denisotieno955@gmail.com</a>
+      <i class="fas fa-copy copy-icon" id="copyEmail" title="Copy email"></i>
+    </div>
+  </section>
+
+  <footer>
+    <p>© <span id="year"></span> <span class="footer-brand">DENMA SOLUTIONS</span> — built with <i class="fas fa-heart" style="color:var(--primary)"></i> by Denma</p>
+    <p class="footer-sub">IT Student · Frontend &amp; Arduino Enthusiast</p>
+  </footer>
+
+</div>
+
+<button id="scrollTop" class="scroll-top" aria-label="Scroll to top"><i class="fas fa-arrow-up"></i></button>
+<div id="toast" class="toast"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
